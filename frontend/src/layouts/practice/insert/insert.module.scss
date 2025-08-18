@@ -1,0 +1,191 @@
+@import "../../../scss/variables.scss";
+.insertBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input {
+  margin-top: 1rem;
+  width: 50rem;
+  height: 6rem;
+  padding: 2rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+.submit {
+  margin-top: 1rem;
+  width: 20rem;
+  height: 3rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 4rem;
+  background-color: #000;
+  margin-top: 5vh;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit:hover {
+  background-color: #222;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: normal;
+}
+.disabled:hover {
+  background-color: #ccc;
+}
+.input1 {
+  font-size: 4rem;
+}
+
+.input2 {
+  font-size: 3rem;
+}
+
+.input3 {
+  font-size: 2rem;
+}
+.defaultFontsize {
+  font-size: 4rem;
+  line-height: 1.5;
+  visibility: hidden; /* Hide the element but keep its styles */
+}
+
+.textarea {
+  width: 50rem;
+  height: 10rem;
+  display: block;
+  text-align: center;
+  line-height: 1;
+  padding-top: 1rem;
+  font-size: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+}
+.resultContainer {
+  height: 3rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .textarea {
+    width: 40rem;
+    height: 8rem;
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .questWord {
+    font-size: 4rem;
+  }
+  .questWordContainer {
+    height: 5rem;
+  }
+  .textarea {
+    width: 30rem;
+    height: 6rem;
+    font-size: 2rem;
+  }
+  .insertBox {
+    padding-top: 1rem;
+  }
+  .resultContainer {
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .questNumber {
+    font-size: 1.2rem;
+  }
+  .submit {
+    width: 15rem;
+    height: 1rem;
+    padding: 1.3rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: $mobile-max) {
+  .questWord {
+    font-size: 3rem;
+  }
+  .questWordContainer {
+    height: 4rem;
+  }
+  .textarea {
+    width: 90%;
+    height: 6rem;
+    font-size: 2rem;
+  }
+  .insertBox {
+    padding-top: 1rem;
+  }
+  .resultContainer {
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .questNumber {
+    font-size: 1.2rem;
+  }
+  .submit {
+    width: 15rem;
+    height: 1rem;
+    padding: 1.3rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: $small-mobile-max) {
+  .container {
+    margin-top: 5vh;
+  }
+  .questWord {
+    font-size: 2.5rem;
+  }
+  .questWordContainer {
+    height: 3rem;
+  }
+  .textarea {
+    width: 90%;
+    height: 5rem;
+    font-size: 1.5rem;
+  }
+  .insertBox {
+    padding-top: 1rem;
+  }
+  .resultContainer {
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  .questNumber {
+    font-size: 1rem;
+  }
+  .submit {
+    width: 15rem;
+    height: 1rem;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+  }
+}

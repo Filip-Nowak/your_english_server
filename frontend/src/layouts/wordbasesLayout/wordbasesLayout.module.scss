@@ -1,0 +1,90 @@
+@import "../../scss/variables.scss";
+
+.wordbasesLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.wordbasesContainer {
+  align-items: center;
+  justify-content: start;
+  width: 70%;
+  height: 60vh;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.empty {
+  font-size: 3rem;
+  margin-top: 5vh;
+  text-align: center;
+  color: #555555;
+}
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 5rem;
+}
+.createWordbaseBtn {
+  width: 20rem;
+  height: 4rem;
+  font-size: 2rem;
+  margin: 0;
+}
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .createWordbaseBtn {
+    width: 18rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+  }
+  .wordbasesContainer {
+    width: 80%;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: $tablet-max) {
+  .createWordbaseBtn {
+    width: 16rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+  .wordbasesContainer {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: $mobile-max) {
+  .createWordbaseBtn {
+    width: 14rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+  }
+  .wordbasesLayout {
+    justify-content: start;
+  }
+  .wordbasesContainer {
+    width: 90%;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: $small-mobile-max) {
+  .createWordbaseBtn {
+    width: 12rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  .wordbasesContainer {
+    width: 90%;
+    padding: 0;
+    height: 40vh;
+    .empty {
+      font-size: 2rem;
+    }
+  }
+}

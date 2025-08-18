@@ -1,0 +1,353 @@
+@import "../../scss/variables.scss";
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header {
+    font-size: 4rem;
+    margin-top: 2vh;
+    color: #777;
+    text-align: center;
+  }
+  .description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1vh;
+    text-align: center;
+    width: 80%;
+  }
+  .exampleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+  }
+  .example {
+    width: 60%;
+    border: 1px solid #ccc;
+    .exampleIndex {
+      font-size: 2rem;
+      color: #999;
+      text-align: center;
+      padding: 0.5vh;
+      background-color: #333;
+    }
+    .exampleText {
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #333;
+      padding: 1vh;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      line-height: 1;
+    }
+    .exampleImage {
+      margin: 1rem;
+      border-radius: 10px;
+    }
+  }
+  .exampleSeparator {
+    font-size: 2rem;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tryContainer {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    .tryText {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 2.5vh;
+    }
+    .tryButtonsContainer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2vh;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 3vh;
+      .tryButton {
+        cursor: pointer;
+        width: 9rem;
+        background-color: #333;
+        color: white;
+        aspect-ratio: 1/1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1.5vh;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        i {
+          font-size: 4rem;
+        }
+      }
+      .tryButton:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+.carousel {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.4s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  color: #333;
+}
+
+.arrow.left {
+  left: 0.5rem;
+}
+
+.arrow.right {
+  right: 0.5rem;
+}
+
+@media screen and (max-width: $laptop-max) {
+  .container {
+    width: 100%;
+    .header {
+      font-size: 3rem;
+    }
+    .exampleContainer {
+      .example {
+        margin-bottom: 2vh;
+        .exampleIndex {
+          font-size: 1.5rem;
+        }
+        .exampleText {
+          font-size: 1rem;
+        }
+        .exampleImageContainer {
+          height: 20rem;
+        }
+      }
+      .exampleSeparator {
+        display: none;
+      }
+    }
+    .tryContainer {
+      width: 100%;
+      .tryButtonsContainer {
+        .tryButton {
+          margin-bottom: 1vh;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet-max) {
+  .container {
+    .header {
+      font-size: 2.5rem;
+    }
+    .description {
+      font-size: 1rem;
+    }
+    .exampleContainer {
+      .example {
+        .exampleIndex {
+          font-size: 1.2rem;
+        }
+        .exampleText {
+          font-size: 0.9rem;
+        }
+      }
+      .exampleSeparator {
+        display: none;
+      }
+    }
+    .tryContainer {
+      .tryText {
+        font-size: 1.5rem;
+      }
+      .tryButtonsContainer {
+        .tryButton {
+          text-align: center;
+          width: 7rem;
+          font-size: 1rem;
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $mobile-max) {
+  .carousel {
+    width: 28rem;
+  }
+  .container {
+    .header {
+      font-size: 2rem;
+    }
+    .description {
+      font-size: 0.9rem;
+    }
+    .exampleContainer {
+      flex-direction: column;
+      .example {
+        width: 70%;
+        margin-bottom: 1vh;
+        .exampleIndex {
+          font-size: 2rem;
+        }
+        .exampleText {
+          font-size: 1.3rem;
+        }
+        .exampleImageContainer {
+          img {
+            max-width: 80%;
+            height: auto;
+          }
+        }
+      }
+      .exampleSeparator {
+        display: none;
+      }
+    }
+    .tryContainer {
+      width: 100%;
+      .tryText {
+        font-size: 1.2rem;
+      }
+      .tryButtonsContainer {
+        width: 60%;
+        flex-wrap: wrap;
+        .tryButton {
+          width: 40%;
+          margin-bottom: 1vh;
+          font-size: 1.5rem;
+          i {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-mobile-max) {
+  .container {
+    .logo {
+      height: 20%;
+    }
+    .descriptionA {
+      font-size: 0.8rem;
+      width: 95%;
+    }
+    .authBox {
+      button {
+        height: 7vh;
+        font-size: 1.2rem;
+      }
+    }
+    .aboutUsBox {
+      width: 90%;
+      .aboutUsText {
+        font-size: 1.2rem;
+      }
+      button {
+        width: 80%;
+        height: 6vh;
+        font-size: 1.2rem;
+      }
+    }
+    .exampleContainer {
+      width: 100%;
+      height: 30rem;
+      .carousel {
+        width: 80%;
+      }
+      .example {
+        margin-bottom: 1vh;
+        .exampleIndex {
+          font-size: 1.5rem;
+        }
+        .exampleText {
+          font-size: 1rem;
+        }
+        .exampleImageContainer {
+          height: 15rem;
+          img {
+            max-width: 80%;
+            height: auto;
+          }
+        }
+      }
+      .exampleSeparator {
+        display: none;
+      }
+    }
+    .tryContainer {
+      width: 100%;
+      .tryText {
+        font-size: 1.5rem;
+      }
+      .tryButtonsContainer {
+        width: 80%;
+        flex-wrap: wrap;
+        .tryButton {
+          width: 40%;
+          margin-bottom: 1vh;
+          font-size: 1.2rem;
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

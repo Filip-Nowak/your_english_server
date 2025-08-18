@@ -1,0 +1,306 @@
+@import "../../../scss/variables.scss";
+.type {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0.7;
+}
+.infoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  .results {
+    width: 30%;
+    .scoreContainer {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid #000;
+      padding: 2rem;
+      border-radius: 1rem;
+      height: 15rem;
+      align-items: center;
+      .normalScore {
+        font-size: 1.5rem;
+        color: #000;
+        span {
+          font-size: 5rem;
+        }
+      }
+      .scorePercentage {
+        font-size: 1.5rem;
+        .percentage {
+          font-size: 7rem;
+        }
+      }
+      .timeContainer {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        justify-content: space-evenly;
+        .timeLabel {
+          font-size: 2rem;
+          color: #000;
+        }
+        .time {
+          font-size: 4rem;
+          color: #000;
+        }
+      }
+    }
+  }
+  .header {
+    background-color: #000;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.buttonContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  .btn {
+    width: 25%;
+    height: 4rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+.finishButton {
+  position: absolute;
+  z-index: 10;
+  top: 2rem;
+  right: 2rem;
+  background-color: #000;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: fit-content;
+}
+.disabledBtn {
+  background-color: #ccc;
+  color: #000;
+  cursor: auto;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .type {
+    margin-bottom: 0;
+  }
+  .infoContainer {
+    margin-top: 1vh;
+    .results {
+      .scoreContainer {
+        height: 13rem;
+        padding: 1rem;
+        .normalScore {
+          font-size: 1.5rem;
+          span {
+            font-size: 4.5rem;
+          }
+        }
+        .scorePercentage {
+          font-size: 1.5rem;
+          .percentage {
+            font-size: 4.5rem;
+          }
+        }
+        .timeContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          .timeLabel {
+            font-size: 1.5rem;
+          }
+          .time {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    width: 80%;
+    .btn {
+      width: 30%;
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .type {
+    font-size: 1.2rem;
+  }
+  .infoContainer {
+    .header {
+      font-size: 1.4rem;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+    }
+    .results {
+      .scoreContainer {
+        height: 9.5rem;
+        padding: 1rem;
+        .normalScore {
+          font-size: 1.2rem;
+          span {
+            font-size: 4rem;
+          }
+        }
+        .scorePercentage {
+          font-size: 1.2rem;
+          .percentage {
+            font-size: 3.5rem;
+          }
+        }
+        .timeContainer {
+          width: 90%;
+          .timeLabel {
+            font-size: 1.2rem;
+          }
+          .time {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    width: 70%;
+    margin-top: 2rem;
+    .btn {
+      width: 25%;
+      height: 2.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: $mobile-max) {
+  .type {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    align-items: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    .header {
+      font-size: 1.5rem;
+      width: 30%;
+      padding-top: 0.3rem;
+      border-top-right-radius: 0.8rem;
+      border-top-left-radius: 0.8rem;
+    }
+    .results {
+      width: 30rem;
+      .scoreContainer {
+        height: 17rem;
+        padding: 1rem;
+        .normalScore {
+          font-size: 4rem;
+          span {
+            font-size: 6rem;
+          }
+        }
+        .scorePercentage {
+          font-size: 4rem;
+          .percentage {
+            font-size: 6rem;
+          }
+        }
+        .timeContainer {
+          width: 60%;
+          align-items: center;
+          .timeLabel {
+            font-size: 3rem;
+          }
+          .time {
+            font-size: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    width: 50%;
+    margin-top: 3vh;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+    .btn {
+      width: 48%;
+      margin-top: 0.2rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      &:nth-child(1) {
+        width: 100%;
+        height: 4rem;
+        font-size: 2rem;
+      }
+    }
+  }
+  .finishButton {
+    top: 6rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: $small-mobile-max) {
+  .infoContainer {
+    .results {
+      width: 90%;
+      .scoreContainer {
+        height: 13rem;
+        padding: 1rem;
+        .normalScore {
+          font-size: 2rem;
+          span {
+            font-size: 4.5rem;
+          }
+        }
+        .scorePercentage {
+          font-size: 2rem;
+          .percentage {
+            font-size: 4.5rem;
+          }
+        }
+        .timeContainer {
+          width: 80%;
+          align-items: center;
+          .timeLabel {
+            font-size: 2.5rem;
+          }
+          .time {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    width: 90%;
+  }
+}

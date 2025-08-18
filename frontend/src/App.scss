@@ -1,0 +1,16 @@
+@import "./scss/variables.scss";
+body {
+  font-family: "Bebas Neue";
+}
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1rem;
+}
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  ::-webkit-scrollbar-thumb {
+    width: 10px;
+  }
+}

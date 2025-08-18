@@ -1,0 +1,186 @@
+@import "../../../../scss/variables.scss";
+.pickerContainer {
+  width: 50%;
+  border-radius: 1rem;
+  .picker {
+    border-radius: 1rem;
+    border: 5px solid #000;
+    height: 15rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    .details {
+      font-size: 3rem;
+      background-color: #ccc;
+      padding: 1rem;
+      width: 50%;
+      .selectLabel {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .detailsScore {
+        font-size: 2.5rem;
+        display: flex;
+        width: 100%;
+        .percentage {
+          font-size: 5rem;
+          text-align: center;
+        }
+        .answersInfo {
+          width: 60%;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #222;
+      width: 35%;
+      color: #fff;
+      padding: 1rem;
+      padding-bottom: 0;
+      overflow: auto;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        padding: 0.5rem;
+        background-color: #333;
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+      }
+      .selected {
+        background-color: #444;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .pickerContainer {
+    .picker {
+      height: 13rem;
+      padding: 1rem;
+      .details {
+        font-size: 2.5rem;
+        .selectLabel {
+          font-size: 1.2rem;
+        }
+        .detailsScore {
+          font-size: 2rem;
+          .percentage {
+            font-size: 4rem;
+          }
+          .answersInfo {
+            width: 70%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .list {
+        width: 40%;
+        .item {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .pickerContainer {
+    .picker {
+      height: 9.5rem;
+      padding: 1rem;
+      .details {
+        font-size: 1.2rem;
+        .label {
+          font-size: 2rem;
+        }
+        .detailsScore {
+          font-size: 2rem;
+          .percentage {
+            font-size: 3rem;
+          }
+          .answersInfo {
+            width: 80%;
+            font-size: 1rem;
+          }
+        }
+      }
+      .list {
+        .item {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-max) {
+  .pickerContainer {
+    margin-top: 1rem;
+    width: 100%;
+    .picker {
+      width: 28.55rem;
+      height: 15rem;
+      padding: 0.5rem;
+      margin-right: auto;
+      margin-left: auto;
+      .details {
+        font-size: 3rem;
+        .selectLabel {
+          font-size: 2rem;
+        }
+        .detailsScore {
+          font-size: 3rem;
+          .percentage {
+            font-size: 3.5rem;
+          }
+          .answersInfo {
+            margin-left: 1rem;
+            width: 90%;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .list {
+        width: 30%;
+        .item {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $small-mobile-max) {
+  .pickerContainer {
+    .picker {
+      width: 85%;
+      margin-right: auto;
+      margin-left: auto;
+      .details {
+        font-size: 2.5rem;
+        .selectLabel {
+          font-size: 1.5rem;
+        }
+        .detailsScore {
+          margin-top: 1rem;
+          font-size: 2rem;
+          .percentage {
+            font-size: 3rem;
+          }
+          .answersInfo {
+            width: 90%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

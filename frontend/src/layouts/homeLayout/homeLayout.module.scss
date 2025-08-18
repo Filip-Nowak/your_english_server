@@ -1,0 +1,74 @@
+@import "../../scss/variables.scss";
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.btnContainer {
+  background-color: #cccccc;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 2rem;
+  width: 20rem;
+  height: 14rem;
+  margin: 2rem 4rem;
+  font-size: 2.5rem;
+  i {
+    margin-left: 2rem;
+    font-size: 5rem;
+  }
+  .text {
+    width: 50%;
+  }
+}
+@media screen and (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .btnContainer {
+    font-size: 2.8rem;
+    width: 19rem;
+    height: 12rem;
+    margin: 1rem 2rem;
+    i {
+      font-size: 4.5rem;
+    }
+  }
+}
+@media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .buttonsContainer {
+    margin: 0;
+  }
+  .btnContainer {
+    font-size: 1.8rem;
+    width: 15rem;
+    height: 9rem;
+    margin: 1rem 2rem;
+    i {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media screen and (max-width: $mobile-max) {
+  .btnContainer {
+    width: 30rem;
+    height: 8rem;
+    margin: 1rem 0;
+    font-size: 3rem;
+    display: flex;
+    i {
+      margin-left: 4rem;
+    }
+    // justify-content: center;
+  }
+}
+@media screen and (max-width: $small-mobile-max) {
+  .btnContainer {
+    width: 80%;
+    font-size: 2.5rem;
+    i {
+      margin-left: 2rem;
+      font-size: 3rem;
+    }
+  }
+}

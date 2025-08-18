@@ -1,0 +1,17 @@
+p {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5vh;
+}
+.button {
+  color: white;
+  background-color: #333333;
+  width: 20vw;
+  height: 10vh;
+  margin: 10vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: 5vh;
+}

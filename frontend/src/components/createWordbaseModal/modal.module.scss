@@ -1,0 +1,42 @@
+@import "../../scss/variables.scss";
+.text {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.input {
+  font-size: 3rem;
+  width: 70%;
+}
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  height: 1.5rem;
+}
+.cancelBtn {
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+  width: 12rem;
+}
+.modal {
+  height: 20rem;
+  width: 30rem;
+}
+
+@media (max-width: $small-mobile-max) {
+  .modal {
+    width: 90%;
+    height: 20rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  .input {
+    font-size: 2rem;
+    width: 60%;
+  }
+}

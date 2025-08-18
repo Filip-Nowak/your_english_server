@@ -1,0 +1,302 @@
+@import "../../scss/variables.scss";
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.acceptContainer {
+  display: flex;
+  font-size: 2rem;
+  justify-content: right;
+  width: 15%;
+  div {
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+}
+.wordsContainer {
+  height: 60vh;
+  margin-top: 2rem;
+  width: 70rem;
+  background-color: #888;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 0.5vh;
+
+  .listHeader {
+    display: flex;
+    justify-content: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 10%;
+  }
+  .listContainer {
+    width: 100%;
+    height: 70%;
+    .list {
+      // position: absolute;
+      overflow: auto;
+      overflow-x: hidden;
+      height: 100%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      .relation {
+        display: flex;
+        justify-content: left;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 1.5rem;
+        background-color: #ccc;
+        .number {
+          font-weight: bold;
+          color: #555;
+          margin-left: 5%;
+          width: 5%;
+        }
+        .word {
+          font-weight: bold;
+          margin-left: 10%;
+          width: 25%;
+          overflow: hidden;
+        }
+        .meaning {
+          overflow: hidden;
+          font-weight: bold;
+          margin-left: 10%;
+          width: 25%;
+        }
+        .delete {
+          color: red;
+          font-size: 1.8rem;
+          text-align: center;
+          width: 10%;
+          margin-left: 10%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-left: 3px solid black;
+        }
+        .input {
+          background-color: #888;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .buttons {
+    padding-bottom: 0.5rem;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .button {
+      width: 12rem;
+      height: 70%;
+      font-size: 2rem;
+      margin: 0 2rem;
+    }
+  }
+}
+@media (min-width: $laptop-min) and (max-width: $laptop-max) {
+  .subtitle {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .wordsContainer {
+    margin: 0 auto;
+    width: 50rem;
+    height: 70vh;
+    .listHeader {
+      font-size: 1.8rem;
+    }
+    .listContainer {
+      height: 75%;
+
+      .list {
+        width: 45rem;
+        .relation {
+          font-size: 1.3rem;
+          .number {
+            font-size: 1.2rem;
+          }
+          .delete {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    .buttons {
+      height: 15%;
+      .button {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  .subtitle {
+    display: none;
+  }
+  .wordsContainer {
+    width: 90%;
+    height: 70vh;
+    margin-top: 0;
+    .listHeader {
+      font-size: 1.5rem;
+    }
+    .listContainer {
+      height: 75%;
+
+      .list {
+        width: 100%;
+        .relation {
+          width: 90%;
+          padding: 0.5rem 0;
+          font-size: 1rem;
+          // height: 1.2rem;
+          .number {
+            font-size: 1rem;
+          }
+          .delete {
+            font-size: 1.2rem;
+          }
+          .word {
+            font-size: 1.2rem;
+          }
+          .meaning {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .buttons {
+      height: 15%;
+      .button {
+        width: 8.5rem;
+        height: 80%;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .subtitle {
+    display: none;
+  }
+  .wordsContainer {
+    width: 98%;
+    height: 55vh;
+    margin-top: 0;
+    .listHeader {
+      font-size: 1.2rem;
+    }
+    .listContainer {
+      height: 75%;
+
+      .list {
+        width: 100%;
+        .relation {
+          width: 90%;
+          padding: 0.5rem 0;
+          font-size: 1rem;
+          // height: 1.2rem;
+          .number {
+            font-size: 1rem;
+          }
+          .delete {
+            font-size: 1.2rem;
+          }
+          .word {
+            font-size: 1.2rem;
+          }
+          .meaning {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .buttons {
+      height: 15%;
+      .button {
+        width: 8.5rem;
+        height: 80%;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media (max-width: $small-mobile-max) {
+  .acceptContainer {
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: right;
+    width: 15%;
+    div {
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .wordsContainer {
+    width: 100%;
+    height: 50vh;
+    .listHeader {
+      font-size: 1.2rem;
+    }
+    .listContainer {
+      height: 75%;
+
+      .list {
+        width: 100%;
+        .relation {
+          width: 90%;
+          padding: 0.5rem 0;
+          font-size: 1rem;
+          // height: 1.2rem;
+          .number {
+            font-size: 1rem;
+          }
+          .delete {
+            font-size: 1.2rem;
+          }
+          .word {
+            font-size: 1rem;
+            width: 20%;
+          }
+          .meaning {
+            width: 20%;
+            font-size: 1rem;
+          }
+          .input {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .buttons {
+      height: 15%;
+      .button {
+        width: 8.5rem;
+        height: 80%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
