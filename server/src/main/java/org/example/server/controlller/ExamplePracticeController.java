@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000","http://192.168.1.26:3000"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://srv40.mikr.us:20172"}, allowCredentials = "true")
 
 @RequiredArgsConstructor
 @RequestMapping("/api/example-practice")

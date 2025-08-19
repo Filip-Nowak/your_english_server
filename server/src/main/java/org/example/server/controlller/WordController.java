@@ -20,7 +20,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"http://localhost:3000","http://192.168.1.26:3000"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://srv40.mikr.us:20172"}, allowCredentials = "true")
 
 @RequestMapping("/api")
 public class WordController {
