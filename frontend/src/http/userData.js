@@ -1,4 +1,4 @@
-const url = "http://192.168.1.26:8080/api";
+const url = "http://srv40.mikr.us:30172/api";
 export async function getWordbases() {
   return await fetchDataWithToken(`${url}/wordbases`, "get");
 }

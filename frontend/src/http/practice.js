@@ -1,6 +1,6 @@
 import { fetchDataWithToken } from "./userData";
 
-const url = "http://192.168.1.26:8080/api/practice";
+const url = "http://srv40.mikr.us:30172/api/practice";
 export async function startFlashcards(wordbases) {
   const link = getLink("flashcards", wordbases, 0, true);
   return await fetchDataWithToken(link, "get");

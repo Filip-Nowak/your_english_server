@@ -121,7 +121,7 @@ function getParams() {
 export async function confirmLoader({ params }) {
   const token = params.token;
   const response = await fetch(
-    `http://192.168.1.26:8080/api/auth/confirm?token=${token}`,
+    `http://srv40.mikr.us:30172/api/auth/confirm?token=${token}`,
     { headers: { "Content-Type": "application/json" } }
   );
   console.log(response);
@@ -130,7 +130,7 @@ export async function confirmLoader({ params }) {
 }
 export async function exampleFlashcardsLoader() {
   const response = await fetch(
-    "http://192.168.1.26:8080/api/example-practice/flashcards",
+    "http://srv40.mikr.us:30172/api/example-practice/flashcards",
     {
       headers: { "Content-Type": "application/json" },
     }
@@ -142,7 +142,7 @@ export async function exampleFlashcardsLoader() {
 
 export async function exampleMultipleChoiceLoader() {
   const response = await fetch(
-    "http://192.168.1.26:8080/api/example-practice/choice",
+    "http://srv40.mikr.us:30172/api/example-practice/choice",
     {
       headers: { "Content-Type": "application/json" },
     }
@@ -153,7 +153,7 @@ export async function exampleMultipleChoiceLoader() {
 }
 export async function exampleInsertLoader() {
   const response = await fetch(
-    "http://192.168.1.26:8080/api/example-practice/insert",
+    "http://srv40.mikr.us:30172/api/example-practice/insert",
     {
       headers: { "Content-Type": "application/json" },
     }
@@ -164,7 +164,7 @@ export async function exampleInsertLoader() {
 }
 export async function exampleConnectLoader() {
   const response = await fetch(
-    "http://192.168.1.26:8080/api/example-practice/connect",
+    "http://srv40.mikr.us:30172/api/example-practice/connect",
     {
       headers: { "Content-Type": "application/json" },
     }
