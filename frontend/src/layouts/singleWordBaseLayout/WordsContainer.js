@@ -16,7 +16,6 @@ export default function WordsContainer({
   const listRef = React.createRef(null);
   const [adding, setAdding] = useState(false);
   const onAddClick = () => {
-    console.log("xdd");
     setSelectedRelation(null);
     setEditing(true);
     setAdding(true);

@@ -16,7 +16,6 @@ export default function ChoicePractice() {
   useEffect(() => {
     timerRef.current = setInterval(() => {
       time.current += 1;
-      console.log(time.current);
     }, 1000);
     return () => clearInterval(timerRef.current);
   }, []);
@@ -37,7 +36,6 @@ export default function ChoicePractice() {
       return [...prevState];
     });
   };
-  console.log(response);
   return index === response.data.length ? (
     <FinishedLayout wordbases={wordbases} time={time.current} type={"choice"} />
   ) : (
@@ -48,7 +46,10 @@ export default function ChoicePractice() {
       addPoints={addPoint}
       finishButton={
         <FinishButton
-          handleClick={() => setIndex(response.data.length)}
+          handleClick={() => {
+            setIndex(response.data.length);
+            clearInterval(timerRef.current);
+          }}
           disabled={index === 0 || index === response.data.length - 1}
         />
       }

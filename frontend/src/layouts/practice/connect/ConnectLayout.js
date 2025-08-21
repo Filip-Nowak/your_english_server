@@ -15,7 +15,6 @@ export default function ConnectLayout({
   const [leftSelected, setLeftSelected] = useState(null);
   const [rightSelected, setRightSelected] = useState(null);
   const [finished, setFinished] = useState(0);
-  console.log(finished);
   useEffect(() => {
     if (leftSelected !== null && rightSelected !== null) {
       const left = leftWords[leftSelected];

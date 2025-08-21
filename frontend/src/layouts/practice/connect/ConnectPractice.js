@@ -28,7 +28,6 @@ export default function ConnectPractice() {
   useEffect(() => {
     timerRef.current = setInterval(() => {
       time.current += 1;
-      console.log(time.current);
     }, 1000);
     return () => clearInterval(timerRef.current);
   }, []);
@@ -36,7 +35,6 @@ export default function ConnectPractice() {
     setIndex((prevState) => prevState + 1);
   };
   const addPoints = (points, wordbase) => {
-    console.log(points, wordbase);
     setWordbases((prevState) => {
       for (let i = 0; i < prevState.length; i++) {
         if (prevState[i].name === wordbase) {
@@ -50,9 +48,9 @@ export default function ConnectPractice() {
     });
   };
   const handleFinish = () => {
+    clearInterval(timerRef.current);
     setIndex(quests.length);
   };
-  console.log(wordbases);
   return index === quests.length ? (
     <FinishedLayout
       wordbases={wordbases}

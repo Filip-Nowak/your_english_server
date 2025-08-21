@@ -5,31 +5,25 @@ import { fetchData } from "../../http/userData";
 import { useNavigate } from "react-router-dom";
 function AboutUsLayout() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    fetchData("/example-wordbase", "get").then((data) => {
-      console.log(data);
-    });
-  }, []);
   const modes = [
     {
       name: "fiszki",
-      icon: <i class="fa-solid fa-clone"></i>,
+      icon: <i className="fa-solid fa-clone"></i>,
       urlName: "flashcards",
     },
     {
       name: "wielokrotny wybór",
-      icon: <i class="fa-solid fa-list"></i>,
+      icon: <i className="fa-solid fa-list"></i>,
       urlName: "choice",
     },
     {
       name: "wpisz odpowiedź",
-      icon: <i class="fa-solid fa-pen-to-square"></i>,
+      icon: <i className="fa-solid fa-pen-to-square"></i>,
       urlName: "insert",
     },
     {
       name: "połącz",
-      icon: <i class="fa-solid fa-link"></i>,
+      icon: <i className="fa-solid fa-link"></i>,
       urlName: "connect",
     },
   ];

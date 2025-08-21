@@ -51,25 +51,17 @@ export default function LogInPage() {
   const onLoginFail = (errors) => {
     passwordInput.current = "";
     passwordRef.current.value = "";
-    console.log("login fail");
     loadingContext.setLoading(false);
     setError(true);
-    console.log(errors);
   };
   const onLoginSuccess = (token) => {
     loadingContext.setLoading(false);
-    console.log("login success");
-    console.log(token);
     localStorage.setItem("token", token);
     window.location.href = "/";
   };
   const onRequestFail = (response) => {
     loadingContext.setLoading(false);
-    console.log("request fail");
-    // setError(true);
-    console.log(response);
   };
-  console.log(usernameInput.current.length === 0);
   return (
     <div>
       <div

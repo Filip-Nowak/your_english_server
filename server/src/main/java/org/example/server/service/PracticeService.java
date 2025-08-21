@@ -108,8 +108,6 @@ public class PracticeService {
         List<ChoiceModel> choiceModels = new LinkedList<>();
         for (Relation relation : relations) {
             List<Relation> possibleRelations = new LinkedList<>(relation.getWordBase().getRelations());
-            System.out.println("chuj");
-            System.out.println(possibleRelations.size());
             possibleRelations.remove(relation);
             boolean language = Math.random() < 0.5;
             ChoiceModel choiceModel = new ChoiceModel();

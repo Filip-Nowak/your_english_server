@@ -22,9 +22,7 @@ export default function SingleWordBaseLayout() {
     return;
   }
   const handleItemClick = (index) => {
-    console.log(index);
     setEditing((prevEditing) => {
-      console.log(prevEditing);
       if (!prevEditing) setSelectedRelation(index);
       return prevEditing;
     });
@@ -41,7 +39,6 @@ export default function SingleWordBaseLayout() {
     updateRelation(wordbase.name, number, word, meaning).then((data) => {
       loadingContext.setLoading(false);
       if (data.error) {
-        console.log(data.error);
         return;
       }
       setEditing(false);
@@ -58,7 +55,6 @@ export default function SingleWordBaseLayout() {
     addRelation(wordbase.name, word.trim(), meaning.trim()).then((data) => {
       loadingContext.setLoading(false);
       if (data.error) {
-        console.log(data.error);
         return;
       }
       setEditing(false);
@@ -66,12 +62,10 @@ export default function SingleWordBaseLayout() {
     });
   };
   const handleDelete = (number) => {
-    console.log("delete");
     loadingContext.setLoading(true);
     deleteRelation(wordbase.name, number).then((data) => {
       loadingContext.setLoading(false);
       if (data.error) {
-        console.log(data.error);
         return;
       }
       wordbase.relations.splice(number - 1, 1);

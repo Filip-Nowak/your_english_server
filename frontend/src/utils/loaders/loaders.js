@@ -17,7 +17,6 @@ export async function homeLoader() {
 }
 export async function sidebarLoader() {
   const t = await checkToken();
-  console.log("token", t);
   if (!t) {
     return { wordbasesResponse: [], userResponse: null, token: false };
   }
@@ -36,7 +35,6 @@ export async function wordbasesLoader() {
 export async function singleWordBaseLoader({ params }) {
   const name = params.name;
   const wordbaseResponse = await getWordbase(name);
-  console.log(wordbaseResponse);
   return { wordbaseResponse: wordbaseResponse };
 }
 export async function practiceLoader() {
@@ -50,7 +48,6 @@ export async function flashcardsLoader() {
   }
   const response = await startFlashcards(params.w);
   if (response.error) {
-    console.log(response.message);
     // window.location.href = "/";
     return null;
   }
@@ -124,7 +121,6 @@ export async function confirmLoader({ params }) {
     `http://srv40.mikr.us:30172/api/auth/confirm?token=${token}`,
     { headers: { "Content-Type": "application/json" } }
   );
-  console.log(response);
   const data = await response.json();
   return { error: data.error, message: data.message };
 }
@@ -136,7 +132,6 @@ export async function exampleFlashcardsLoader() {
     }
   );
   const data = await response.json();
-  console.log(data);
   return { response: data };
 }
 
@@ -148,7 +143,6 @@ export async function exampleMultipleChoiceLoader() {
     }
   );
   const data = await response.json();
-  console.log(data);
   return { response: data };
 }
 export async function exampleInsertLoader() {
@@ -159,7 +153,6 @@ export async function exampleInsertLoader() {
     }
   );
   const data = await response.json();
-  console.log(data);
   return { response: data };
 }
 export async function exampleConnectLoader() {
@@ -170,6 +163,5 @@ export async function exampleConnectLoader() {
     }
   );
   const data = await response.json();
-  console.log(data);
   return { response: data };
 }

@@ -9,7 +9,6 @@ export default function UserInfo({ user }) {
       name = name.slice(0, 7) + "...";
     }
   }
-  console.log(name);
   const tokenContext = React.useContext(TokenContext);
   return (
     <>

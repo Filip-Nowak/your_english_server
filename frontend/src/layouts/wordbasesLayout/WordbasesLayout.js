@@ -37,7 +37,7 @@ export default function WordbasesLayout() {
         <MenuBtn
           onClick={onCreateWordbaseClick}
           text="Utwórz słownik"
-          icon={<i class="fa-solid fa-plus"></i>}
+          icon={<i className="fa-solid fa-plus"></i>}
           className={styles.createWordbaseBtn}
         />
       </div>

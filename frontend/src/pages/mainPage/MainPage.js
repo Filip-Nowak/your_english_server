@@ -20,7 +20,6 @@ export default function MainPage() {
       window.location.href = "/";
       return;
     }
-    console.log(loaderData1);
     setLoaderData(loaderData1);
   }, []);
   return (

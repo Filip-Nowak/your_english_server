@@ -49,7 +49,7 @@ export default function CreateWordbaseModal({ hideModal }) {
           onClick={onCreateClick}
           style={{ fontSize: "3rem", marginLeft: "2rem" }}
         >
-          <i class="fa-solid fa-arrow-right"></i>
+          <i className="fa-solid fa-arrow-right"></i>
         </div>
       </div>
       <MenuBtn

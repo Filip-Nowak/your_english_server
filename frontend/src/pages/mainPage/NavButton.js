@@ -2,10 +2,7 @@ import React from "react";
 import styles from "./mainPage.module.scss";
 import TokenContext from "../../context/TokenContext";
 export default function NavButton({ name, icon, path, locked, className }) {
-  console.log(window.location.pathname.split("/")[1]);
-  console.log("path", path);
   const selectedBtn = window.location.pathname.split("/")[1] === path;
-  console.log("selectedBtn", selectedBtn);
   const handleClick = () => {
     if (locked) {
       return;

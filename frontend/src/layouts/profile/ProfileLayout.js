@@ -22,7 +22,6 @@ function ProfileLayout() {
   };
   const openChangePasswordModal = () => {
     setChangeUsernameModal(true);
-    console.log("Change password modal opened");
   };
   const confirmChangeUsername = (formData) => {
     const newUsername = formData.newUsername;
@@ -42,7 +41,6 @@ function ProfileLayout() {
     }
     loadingContext.setLoading(true);
     changeUsername(newUsername, currentPassword).then((success) => {
-      console.log(success);
       loadingContext.setLoading(false);
       if (success === true) {
         alert(

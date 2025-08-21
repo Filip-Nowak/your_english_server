@@ -10,27 +10,27 @@ export default function PracticeLayout() {
   const modes = [
     {
       name: "fiszki",
-      icon: <i class="fa-solid fa-clone"></i>,
+      icon: <i className="fa-solid fa-clone"></i>,
       urlName: "flashcards",
     },
     {
       name: "Wielokrotny wybór",
-      icon: <i class="fa-solid fa-list"></i>,
+      icon: <i className="fa-solid fa-list"></i>,
       urlName: "choice",
     },
     {
       name: "Wstaw odpowiedź",
-      icon: <i class="fa-solid fa-pen-to-square"></i>,
+      icon: <i className="fa-solid fa-pen-to-square"></i>,
       urlName: "insert",
     },
     {
       name: "Połącz",
-      icon: <i class="fa-solid fa-link"></i>,
+      icon: <i className="fa-solid fa-link"></i>,
       urlName: "connect",
     },
     {
       name: "Losowy",
-      icon: <i class="fa-solid fa-random"></i>,
+      icon: <i className="fa-solid fa-random"></i>,
       urlName: "random",
     },
   ];

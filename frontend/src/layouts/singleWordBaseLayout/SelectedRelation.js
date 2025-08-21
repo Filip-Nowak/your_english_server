@@ -38,7 +38,6 @@ export default function SelectedRelation({
   return (
     <div
       onClick={(e) => {
-        console.log("chuj");
         e.stopPropagation();
       }}
       className={styles.relation}
@@ -64,18 +63,17 @@ export default function SelectedRelation({
               handleUpdate(word, meaning, number);
             }}
           >
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div
             style={{ color: "red" }}
             onClick={(e) => {
               e.stopPropagation();
-              console.log(setSelectedRelation);
               setEditing(false);
               setSelectedRelation(null);
             }}
           >
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </div>
         </div>
       )}

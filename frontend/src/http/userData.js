@@ -20,7 +20,6 @@ export async function fetchDataWithToken(url, method, body) {
   });
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
     return data;
   } else {
     if (response.status === 401 || response.status === 403) {
@@ -39,7 +38,6 @@ export async function fetchData(endpoint, method, body) {
   });
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
     return data;
   } else {
     throw new Error("Failed to fetch data");

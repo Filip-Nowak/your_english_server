@@ -32,12 +32,10 @@ export default function InsertPractice() {
   useEffect(() => {
     timerRef.current = setInterval(() => {
       time.current += 1;
-      console.log(time.current);
     }, 1000);
     return () => clearInterval(timerRef.current);
   }, []);
   const addPoint = (points, wordbase) => {
-    console.log(wordbase);
     setWordbases((prevState) => {
       for (let i = 0; i < prevState.length; i++) {
         if (prevState[i].name === wordbase) {

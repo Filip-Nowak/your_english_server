@@ -55,7 +55,9 @@ export default function Carousel({ children }) {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {React.Children.map(children, (child, i) => (
-            <div className={styles.carouselSlide}>{child}</div>
+            <div className={styles.carouselSlide} key={i}>
+              {child}
+            </div>
           ))}
         </div>
       </div>

@@ -30,22 +30,22 @@ export default function HomeLayout() {
             <HomeBtn
               onClick={onPracticeClick}
               text="ćwicz"
-              icon={<i class="fa-solid fa-pen-to-square"></i>}
+              icon={<i className="fa-solid fa-pen-to-square"></i>}
             />
             <HomeBtn
               onClick={onWordbasesClick}
               text="twoje śłowniki"
-              icon={<i class="fa-solid fa-list"></i>}
+              icon={<i className="fa-solid fa-list"></i>}
             />
             <HomeBtn
               onClick={onCreateWordbaseClick}
               text="utwórz słownik"
-              icon={<i class="fa-solid fa-plus"></i>}
+              icon={<i className="fa-solid fa-plus"></i>}
             />
             <HomeBtn
               onClick={onSettingsClick}
               text="konto"
-              icon={<i class="fa-solid fa-gear"></i>}
+              icon={<i className="fa-solid fa-gear"></i>}
             />
           </div>
           <div style={{ textAlign: "center", width: "100%" }}>

@@ -65,18 +65,12 @@ export default function RegisterPage() {
     passwordRef.current.value = "";
     confirmPasswordRef.current.value = "";
     loadingContext.setLoading(false);
-    console.log("register fail");
     setErrors(errors);
-    console.log(errors);
   };
-  const onRequestFail = (response) => {
-    console.log("request fail");
-    console.log(response);
-  };
+  const onRequestFail = (response) => {};
 
   const onRegisterSuccess = (token) => {
     loadingContext.setLoading(false);
-    console.log("register success");
     localStorage.setItem("token", token);
     window.location.href = "/";
     // window.location.href = "/emailSent";

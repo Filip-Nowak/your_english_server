@@ -12,9 +12,9 @@ export default function WordbaseModal({
       <div className={styles.modal}>
         <div className={styles.modalTitle}>Wybierz słownik</div>
         <div className={styles.list}>
-          {wordbases.map((wordbase) => (
+          {wordbases.map((wordbase, index) => (
             <div
-              key={wordbase.id}
+              key={index}
               className={styles.pick}
               onClick={() => {
                 addWordbase(wordbase.name);

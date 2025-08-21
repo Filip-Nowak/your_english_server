@@ -25,7 +25,6 @@ export default function ShrinkingFontTextarea({
         0.5 * defaultFont
       );
     }
-    console.log(newFontSize);
     textareaRef.current.style.fontSize = `${newFontSize}px`;
     onChange(e);
   };

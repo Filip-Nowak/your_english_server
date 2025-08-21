@@ -19,6 +19,7 @@ export default function ModeSelector({ modes, selectedMode, setSelectedMode }) {
             name={mode.name}
             icon={mode.icon}
             selected={i === selectedMode}
+            key={i}
           />
         ))}
       </div>

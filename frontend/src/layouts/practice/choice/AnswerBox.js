@@ -13,7 +13,6 @@ export default function AnswerBox({
     if (correct !== null) return;
     setSelected(index);
   };
-  console.log(selected);
   return (
     <div className={styles.answerBox}>
       <div className={styles.question}>co to znaczy?</div>

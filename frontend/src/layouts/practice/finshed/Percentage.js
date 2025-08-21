@@ -9,7 +9,6 @@ export default function Percentage({ percentage, color }) {
         className={styles.percentage}
         style={{
           color: color,
-          fontSize: !Number.isInteger(percentage) ? "5rem" : "",
         }}
       >
         {percentage} %

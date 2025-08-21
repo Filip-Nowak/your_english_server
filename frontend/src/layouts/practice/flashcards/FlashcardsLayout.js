@@ -12,18 +12,12 @@ export default function FlashcardsLayout() {
   const [words, setWords] = useState(data.words);
   const [number, setNumber] = useState(1);
   const [index, setIndex] = useState(0);
-  console.log(data);
   const handleNext = async () => {
     if (index + 1 === words.length) {
       if (number === data.max) return;
-      console.log(number);
       const page = number / 20;
-      console.log(page);
       const xd = await loadFlashCards(data.wordbases, page);
-      console.log(xd);
-      console.log(xd.data);
       const newWords = xd.data.words;
-      console.log(newWords);
       setWords((prevState) => {
         return [...prevState, ...newWords];
       });

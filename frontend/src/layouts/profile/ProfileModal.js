@@ -32,11 +32,8 @@ function ProfileModal({
   const handleCancel = () => {
     closeModal();
   };
-  console.log(formData);
   const handleConfirm = (e) => {
-    console.log("Confirm clicked");
     e.preventDefault();
-    console.log(checkboxRef.current.checked);
     if (checkboxRef.current && !checkboxRef.current.checked) {
       alert("Please confirm the action by checking the box.");
       return;
@@ -48,14 +45,13 @@ function ProfileModal({
     const result = onConfirm(confirmObj);
     setErrors(result);
   };
-  console.log(errors);
   return show ? (
     <Modal className={styles.modal}>
       <div className={styles.modalContent}>
         <div className={styles.header}>{header}</div>
         <div onSubmit={handleConfirm} className={styles.form}>
           {inputs.map((input, index) => (
-            <div>
+            <div key={index}>
               <div className={styles.error}>
                 {errors[input.name] && (
                   <span className={styles.errorText}>{errors[input.name]}</span>

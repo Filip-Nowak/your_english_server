@@ -30,7 +30,6 @@ export default function SelectedWordbases({
       )
     );
   };
-  console.log(wordbases);
   return (
     <div>
       <div className={styles.container}>
@@ -41,9 +40,9 @@ export default function SelectedWordbases({
           {selectedWordbases.length === 0 ? (
             <div>Nie wybrano żadnych słowników</div>
           ) : (
-            selectedWordbases.map((wordbase) => (
+            selectedWordbases.map((wordbase, index) => (
               <WordbaseElement
-                key={wordbase.id}
+                key={index}
                 name={wordbase}
                 handleDelete={handleDelete}
               />

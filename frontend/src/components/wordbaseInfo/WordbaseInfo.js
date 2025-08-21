@@ -6,11 +6,9 @@ export default function WordbaseInfo({ name, count }) {
     deleteWordbase(name).then(() => {
       window.location.reload();
     });
-    console.log("delete clicked");
   };
   const onClick = () => {
     window.location.href = `/wordbase/${name}`;
-    console.log("clicked");
   };
   let displayName = name;
   if (name.length > 20) {
@@ -23,7 +21,7 @@ export default function WordbaseInfo({ name, count }) {
         <div className={styles.count}>słowa: {count}</div>
       </div>
       <div className={styles.delete} onClick={handleDelete}>
-        <i class="fa-solid fa-trash"></i>
+        <i className="fa-solid fa-trash"></i>
       </div>
     </div>
   );

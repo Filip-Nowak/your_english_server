@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import InsertLayout from "../insert/InsertLayout";
 import ConnectLayout from "../connect/ConnectLayout";
@@ -16,14 +16,19 @@ export default function RandomPractice() {
   const [number, setNumber] = useState(1);
   const [wordbases, setWordbases] = useState([]);
   const laodingContext = useContext(LoadingContext);
-
+  const timerRef = useRef(null);
+  const time = useRef(0);
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      time.current += 1;
+    }, 1000);
+    return () => clearInterval(timerRef.current);
+  }, []);
   const handleNext = () => {
     laodingContext.setLoading(true);
     getNextQuest().then((res) => {
       if (res) {
-        console.log(res);
         const data = res.response.data;
-        console.log(data);
         setQuest(data.quest);
         setNumber((prevState) => prevState + 1);
         setMode(data.mode);
@@ -37,7 +42,6 @@ export default function RandomPractice() {
     return await randomLoader();
   };
   const addPoints = (points, wordbaseName) => {
-    console.log(wordbaseName);
     setWordbases((prevState) => {
       for (let i = 0; i < prevState.length; i++) {
         if (prevState[i].name === wordbaseName) {
@@ -52,6 +56,7 @@ export default function RandomPractice() {
   };
   const handleFinish = () => {
     setMode(null);
+    clearInterval(timerRef.current);
   };
   return mode === "insert" ? (
     <InsertLayout
@@ -83,6 +88,6 @@ export default function RandomPractice() {
       }
     />
   ) : (
-    <FinishedLayout wordbases={wordbases} time={50} type={"random"} />
+    <FinishedLayout wordbases={wordbases} time={time.current} type={"random"} />
   );
 }

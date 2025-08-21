@@ -8,7 +8,6 @@ export async function register(
   onRequestFail
 ) {
   const body = JSON.stringify({ username: name, password: password });
-  console.log(body);
   const response = await fetch(`${url}/auth/register`, {
     method: "post",
     headers: { "Content-Type": "application/json" },
@@ -51,7 +50,6 @@ export async function login(
     if (data.errors === null) {
       onLoginSuccess(data.token);
     } else {
-      console.log(data.errors);
       const errorsArr = data.errors.split(";");
       errorsArr.pop();
       const errors = {};
@@ -72,17 +70,13 @@ export async function changeUsername(newUsername, currentPassword) {
     username: newUsername,
     password: currentPassword,
   };
-  console.log(body);
-  console.log("XD");
   const response = await fetchDataWithToken(
     `${url}/auth/change/username`,
     "post",
     body
   );
-  console.log(response);
   if (!response.error) {
     const data = response;
-    console.log(data);
     localStorage.removeItem("token");
     return true;
   } else {
@@ -102,7 +96,6 @@ export async function changePassword(username, currentPassword, newPassword) {
   );
   if (!response.error) {
     const data = response;
-    console.log(data);
     localStorage.removeItem("token");
     return true;
   } else {

@@ -5,7 +5,6 @@ import WordbasePicker from "./picker/WordbasePicker";
 import ScoreInfo from "./ScoreInfo";
 import MenuBtn from "../../../components/menuBtn/MenuBtn";
 export default function FinishedLayout({ type, time, wordbases }) {
-  console.log(wordbases);
   let maxScore = 0;
   wordbases.forEach((wordbase) => {
     maxScore += wordbase.maxScore;

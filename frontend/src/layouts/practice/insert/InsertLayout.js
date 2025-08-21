@@ -19,9 +19,7 @@ export default function InsertLayout({
   const handleSubmit = (answer) => {
     const c = checkCorrectness(answer);
     setCorrect(c);
-    console.log(word);
     if (c) {
-      console.log(word);
       addPoints(1, word.wordBaseName);
     } else {
       addPoints(0, word.wordBaseName);

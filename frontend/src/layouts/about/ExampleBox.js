@@ -6,7 +6,12 @@ function ExampleBox({ examples }) {
     <div className={styles.exampleContainer}>
       <Carousel>
         {examples.map((example, index) => (
-          <Example text={example.text} img={example.image} index={index} />
+          <Example
+            text={example.text}
+            img={example.image}
+            index={index}
+            key={index}
+          />
         ))}
       </Carousel>
     </div>
