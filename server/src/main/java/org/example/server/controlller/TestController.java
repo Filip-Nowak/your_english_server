@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"http://srv40.mikr.us:20172"}, allowCredentials = "true")
+@CrossOrigin(origins = {"${CROSS_ORIGIN_URL}"}, allowCredentials = "true")
 @org.springframework.web.bind.annotation.RestController
 public class TestController {
     private final UserService userService;
